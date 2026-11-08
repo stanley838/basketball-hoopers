@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basketball Hoopers – Login</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Black smoke rising + embers -->
+<canvas id="smoke" aria-hidden="true"></canvas>
+<!-- Fire at the bottom of the screen -->
+<div class="fire-floor" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<main class="stage">
+  <div class="card-wrap">
+    <!-- Bubbles rise from the top of the login card -->
+    <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+
+    <!-- ============ LOGIN ============ -->
+    <section class="card" id="loginView">
+      <div class="ball" aria-hidden="true"></div>
+      <h1 class="title">Basketball <span>Hoopers</span></h1>
+      <p class="sub">Log in to step onto the court.</p>
+
+      <div class="msg" id="msg" role="alert"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="email" placeholder="you@example.com">
+          <div class="hint" data-for="email"></div>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="inp">
+            <input id="password" type="password" autocomplete="current-password" placeholder="Your password">
+            <button type="button" class="eye" id="eye">Show</button>
+          </div>
+          <div class="hint" data-for="password"></div>
+        </div>
+        <label class="check"><input type="checkbox" id="remember" checked> Remember me</label>
+
+        <!-- Fire button -->
+        <button class="fire-btn" type="submit" id="loginBtn">
+          <span class="flames" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="label" id="btnLabel">Log in</span>
+        </button>
+      </form>
+
+      <div class="demo">
+        <p class="demo-title">Demo players (tap to fill)</p>
+        <button type="button" class="demo-item" data-email="mj23@hoopers.com" data-pass="Dunk2026">mj23@hoopers.com · Dunk2026</button>
+        <button type="button" class="demo-item" data-email="lebron@hoopers.com" data-pass="King2026">lebron@hoopers.com · King2026</button>
+        <button type="button" class="demo-item" data-email="curry@hoopers.com" data-pass="Splash2026">curry@hoopers.com · Splash2026</button>
+      </div>
+    </section>
+
+    <!-- ============ DASHBOARD ============ -->
+    <section class="card" id="dashView" hidden>
+      <div class="ball" aria-hidden="true"></div>
+      <h1 class="title">Welcome, <span id="dName">Player</span></h1>
+      <p class="sub" id="dInfo"></p>
+      <div class="stats">
+        <div><b id="dNum">#00</b><small>Jersey</small></div>
+        <div><b id="dPos">—</b><small>Position</small></div>
+        <div><b id="dTeam">—</b><small>Team</small></div>
+      </div>
+      <button class="fire-btn" type="button" id="logoutBtn">
+        <span class="flames" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="label">Log out</span>
+      </button>
+    </section>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
